@@ -2,27 +2,29 @@
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# [Project Name] 🎯
+# RISE AND REACH 🎯
 
 ## Basic Details
 
-### Team Name: [Name]
+### Team Name: TINSYNC
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
+- 1: AMITHA GRACY
+- 2: ADITHYA DAS P
 
 ### Hosted Project Link
-[mention your project hosted link here]
+https://adithyadasp.github.io/frontend-RISE-AND-REACH/
 
 ### Project Description
-[2-3 lines about what your project does]
+Rise and Reach is a centralized, city-based support platform that helps women quickly find the right assistance whenever they need it. It connects users to verified helplines, NGOs, shelters, legal aid, and counseling services in their city.
 
-### The Problem statement
-[What problem are you solving?]
+### The Problem Statement
+Many women face issues such as violence, harassment, legal problems, and mental stress, but often do not know where to find help locally. Existing support services are scattered and difficult to access, especially during emergencies. There is a need for a simple, organized platform that connects women to verified help services quickly and safely.
 
 ### The Solution
-[How are you solving it?]
+**Women’s Helpline Directory**
+
+Rise and Reach provides quick, reliable, and city-based support services for women in need. Users can search by city to find emergency assistance, legal guidance, counseling, shelter homes, and more. The platform is user-friendly, fast, and accessible, empowering women with immediate access to trusted resources and promoting safety, awareness, and independence.
 
 ---
 
@@ -30,363 +32,146 @@
 
 ### Technologies/Components Used
 
-**For Software:**
-- Languages used: [e.g., JavaScript, Python, Java]
-- Frameworks used: [e.g., React, Django, Spring Boot]
-- Libraries used: [e.g., axios, pandas, JUnit]
-- Tools used: [e.g., VS Code, Git, Docker]
-
-**For Hardware:**
-- Main components: [List main components]
-- Specifications: [Technical specifications]
-- Tools required: [List tools needed]
+**Software:**
+- Languages: Node.js
+- Frameworks: Express
+- Libraries: Axios
+- Tools: VS Code, Git
 
 ---
 
 ## Features
 
-List the key features of your project:
-- Feature 1: [Description]
-- Feature 2: [Description]
-- Feature 3: [Description]
-- Feature 4: [Description]
+- **City-Based Search:** Instantly find verified helplines, NGOs, shelters, legal aid, and counseling services by city.
+- **Emergency Support:** Immediate access to verified helpline numbers and crisis assistance.
+- **Live Location Accessibility:** Displays real-time location of the nearest women’s helpline center.
+- **Helpline Number Updation:** Authorized users can submit and register new helpline centers.
 
 ---
 
 ## Implementation
 
-### For Software:
+### Software
 
 #### Installation
 ```bash
-[Installation commands - e.g., npm install, pip install -r requirements.txt]
+cd backend
+npm install
 ```
 
 #### Run
 ```bash
-[Run commands - e.g., npm start, python app.py]
+npm start
 ```
-
-### For Hardware:
-
-#### Components Required
-[List all components needed with specifications]
-
-#### Circuit Setup
-[Explain how to set up the circuit]
 
 ---
 
 ## Project Documentation
 
-### For Software:
+### Screenshots
 
-#### Screenshots (Add at least 3)
+![Screenshot1](docs/screenshot1.png)
+*Homepage showing city-based search and helpline listings.*
 
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot2](docs/screenshot2.png)
+*Helpline details and contact options.*
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
-
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot3](docs/screenshot3.png)
+*Review and rating modal for helpline centers.*
 
 #### Diagrams
 
 **System Architecture:**
 
 ![Architecture Diagram](docs/architecture.png)
-*Explain your system architecture - components, data flow, tech stack interaction*
+*Express backend serves API, frontend fetches data and displays helplines, reviews, and favorites.*
 
 **Application Workflow:**
 
 ![Workflow](docs/workflow.png)
-*Add caption explaining your workflow*
-
----
-
-### For Hardware:
-
-#### Schematic & Circuit
-
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
-#### Build Photos
-
-![Team](Add photo of your team here)
-
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
+*User searches by city → API returns helplines → User can view, favorite, and review helplines.*
 
 ---
 
 ## Additional Documentation
 
-### For Web Projects with Backend:
+### API Documentation
 
-#### API Documentation
+**Base URL:** `https://backend-wtkt.onrender.com/api`
 
-**Base URL:** `https://api.yourproject.com`
+#### Endpoints
 
-##### Endpoints
-
-**GET /api/endpoint**
-- **Description:** [What it does]
-- **Parameters:**
-  - `param1` (string): [Description]
-  - `param2` (integer): [Description]
+**GET /helplines**
+- **Description:** Get all helplines
 - **Response:**
 ```json
-{
-  "status": "success",
-  "data": {}
-}
+[
+  {
+    "id": 1,
+    "name": "Women Helpline",
+    "city": "Kochi",
+    "category": "Emergency",
+    "contact": "1234567890",
+    "location": "MG Road"
+  }
+]
 ```
 
-**POST /api/endpoint**
-- **Description:** [What it does]
+**POST /helplines/add**
+- **Description:** Add a new helpline
 - **Request Body:**
 ```json
 {
-  "field1": "value1",
-  "field2": "value2"
+  "name": "New Helpline",
+  "city": "City Name",
+  "category": "Category",
+  "contact": "9876543210",
+  "location": "Location"
 }
 ```
 - **Response:**
 ```json
 {
   "status": "success",
-  "message": "Operation completed"
+  "message": "Helpline added"
 }
 ```
 
-[Add more endpoints as needed...]
+**GET /reviews/:helplineId**
+- **Description:** Get reviews for a helpline
 
----
-
-### For Mobile Apps:
-
-#### App Flow Diagram
-
-![App Flow](docs/app-flow.png)
-*Explain the user flow through your application*
-
-#### Installation Guide
-
-**For Android (APK):**
-1. Download the APK from [Release Link]
-2. Enable "Install from Unknown Sources" in your device settings:
-   - Go to Settings > Security
-   - Enable "Unknown Sources"
-3. Open the downloaded APK file
-4. Follow the installation prompts
-5. Open the app and enjoy!
-
-**For iOS (IPA) - TestFlight:**
-1. Download TestFlight from the App Store
-2. Open this TestFlight link: [Your TestFlight Link]
-3. Click "Install" or "Accept"
-4. Wait for the app to install
-5. Open the app from your home screen
-
-**Building from Source:**
-```bash
-# For Android
-flutter build apk
-# or
-./gradlew assembleDebug
-
-# For iOS
-flutter build ios
-# or
-xcodebuild -workspace App.xcworkspace -scheme App -configuration Debug
-```
-
----
-
-### For Hardware Projects:
-
-#### Bill of Materials (BOM)
-
-| Component | Quantity | Specifications | Price | Link/Source |
-|-----------|----------|----------------|-------|-------------|
-| Arduino Uno | 1 | ATmega328P, 16MHz | ₹450 | [Link] |
-| LED | 5 | Red, 5mm, 20mA | ₹5 each | [Link] |
-| Resistor | 5 | 220Ω, 1/4W | ₹1 each | [Link] |
-| Breadboard | 1 | 830 points | ₹100 | [Link] |
-| Jumper Wires | 20 | Male-to-Male | ₹50 | [Link] |
-| [Add more...] | | | | |
-
-**Total Estimated Cost:** ₹[Amount]
-
-#### Assembly Instructions
-
-**Step 1: Prepare Components**
-1. Gather all components listed in the BOM
-2. Check component specifications
-3. Prepare your workspace
-![Step 1](images/assembly-step1.jpg)
-*Caption: All components laid out*
-
-**Step 2: Build the Power Supply**
-1. Connect the power rails on the breadboard
-2. Connect Arduino 5V to breadboard positive rail
-3. Connect Arduino GND to breadboard negative rail
-![Step 2](images/assembly-step2.jpg)
-*Caption: Power connections completed*
-
-**Step 3: Add Components**
-1. Place LEDs on breadboard
-2. Connect resistors in series with LEDs
-3. Connect LED cathodes to GND
-4. Connect LED anodes to Arduino digital pins (2-6)
-![Step 3](images/assembly-step3.jpg)
-*Caption: LED circuit assembled*
-
-**Step 4: [Continue for all steps...]**
-
-**Final Assembly:**
-![Final Build](images/final-build.jpg)
-*Caption: Completed project ready for testing*
-
----
-
-### For Scripts/CLI Tools:
-
-#### Command Reference
-
-**Basic Usage:**
-```bash
-python script.py [options] [arguments]
-```
-
-**Available Commands:**
-- `command1 [args]` - Description of what command1 does
-- `command2 [args]` - Description of what command2 does
-- `command3 [args]` - Description of what command3 does
-
-**Options:**
-- `-h, --help` - Show help message and exit
-- `-v, --verbose` - Enable verbose output
-- `-o, --output FILE` - Specify output file path
-- `-c, --config FILE` - Specify configuration file
-- `--version` - Show version information
-
-**Examples:**
-
-```bash
-# Example 1: Basic usage
-python script.py input.txt
-
-# Example 2: With verbose output
-python script.py -v input.txt
-
-# Example 3: Specify output file
-python script.py -o output.txt input.txt
-
-# Example 4: Using configuration
-python script.py -c config.json --verbose input.txt
-```
-
-#### Demo Output
-
-**Example 1: Basic Processing**
-
-**Input:**
-```
-This is a sample input file
-with multiple lines of text
-for demonstration purposes
-```
-
-**Command:**
-```bash
-python script.py sample.txt
-```
-
-**Output:**
-```
-Processing: sample.txt
-Lines processed: 3
-Characters counted: 86
-Status: Success
-Output saved to: output.txt
-```
-
-**Example 2: Advanced Usage**
-
-**Input:**
-```json
-{
-  "name": "test",
-  "value": 123
-}
-```
-
-**Command:**
-```bash
-python script.py -v --format json data.json
-```
-
-**Output:**
-```
-[VERBOSE] Loading configuration...
-[VERBOSE] Parsing JSON input...
-[VERBOSE] Processing data...
-{
-  "status": "success",
-  "processed": true,
-  "result": {
-    "name": "test",
-    "value": 123,
-    "timestamp": "2024-02-07T10:30:00"
-  }
-}
-[VERBOSE] Operation completed in 0.23s
-```
+**POST /reviews/add**
+- **Description:** Add a review for a helpline
 
 ---
 
 ## Project Demo
 
 ### Video
-[Add your demo video link here - YouTube, Google Drive, etc.]
-
-*Explain what the video demonstrates - key features, user flow, technical highlights*
+[Demo Video Link](#)
+*Demonstrates city search, helpline listing, reviews, and favorites.*
 
 ### Additional Demos
-[Add any extra demo materials/links - Live site, APK download, online demo, etc.]
+- [Live Frontend](https://adithyadasp.github.io/frontend-RISE-AND-REACH/)
+- [Backend API](https://backend-wtkt.onrender.com/api)
 
 ---
 
-## AI Tools Used (Optional - For Transparency Bonus)
+## AI Tools Used
 
-If you used AI tools during development, document them here for transparency:
+**Tool Used:** GitHub Copilot
 
-**Tool Used:** [e.g., GitHub Copilot, v0.dev, Cursor, ChatGPT, Claude]
-
-**Purpose:** [What you used it for]
-- Example: "Generated boilerplate React components"
-- Example: "Debugging assistance for async functions"
-- Example: "Code review and optimization suggestions"
+**Purpose:**  
+- Generated boilerplate Express routes and frontend JS functions  
+- Debugging assistance for async functions  
+- Code review and optimization suggestions
 
 **Key Prompts Used:**
-- "Create a REST API endpoint for user authentication"
-- "Debug this async function that's causing race conditions"
-- "Optimize this database query for better performance"
+- "Create a REST API endpoint for helpline search"
+- "Implement review system for helplines"
+- "Add favorites feature using localStorage"
 
-**Percentage of AI-generated code:** [Approximately X%]
+**Percentage of AI-generated code:** ~30%
 
 **Human Contributions:**
 - Architecture design and planning
@@ -394,26 +179,18 @@ If you used AI tools during development, document them here for transparency:
 - Integration and testing
 - UI/UX design decisions
 
-*Note: Proper documentation of AI usage demonstrates transparency and earns bonus points in evaluation!*
-
 ---
 
 ## Team Contributions
 
-- [Name 1]: [Specific contributions - e.g., Frontend development, API integration, etc.]
-- [Name 2]: [Specific contributions - e.g., Backend development, Database design, etc.]
-- [Name 3]: [Specific contributions - e.g., UI/UX design, Testing, Documentation, etc.]
+- Amitha Gracy: Frontend development, UI/UX design, documentation
+- Adithya Das P: Backend development, API integration, deployment
 
 ---
 
 ## License
 
-This project is licensed under the [LICENSE_NAME] License - see the [LICENSE](LICENSE) file for details.
-
-**Common License Options:**
-- MIT License (Permissive, widely used)
-- Apache 2.0 (Permissive with patent grant)
-- GPL v3 (Copyleft, requires derivative works to be open source)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
