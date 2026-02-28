@@ -148,7 +148,7 @@ npm start
 ## Project Demo
 
 ### Video
-[Demo Video Link](#)
+https://drive.google.com/file/d/1eqEbYBPktxM8cKsi7QTC3hSmsC4MCZK-/view?usp=drive_link(#)
 *Demonstrates city search, helpline listing, reviews, and favorites.*
 
 ### Additional Demos
